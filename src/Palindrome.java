@@ -1,23 +1,19 @@
-import java.util.Stack;
-import java.util.Queue;
-import java.util.LinkedList;
-    class Palindrome {
-        public static void main(String[] args) {
-            Stack<Integer> stack = new Stack<>();
-            stack.push(10);
-            stack.push(20);
-            stack.push(30);
-            System.out.println("LIFO using Stack:");
-            while (!stack.isEmpty()) {
-                System.out.println(stack.pop());
-            }
-            Queue<Integer> queue = new LinkedList<>();
-            queue.add(10);
-            queue.add(20);
-            queue.add(30);
-            System.out.println("FIFO using Queue:");
-            while (!queue.isEmpty()) {
-                System.out.println(queue.remove());
+import java.util.Deque;
+import java.util.ArrayDeque;
+        class Palindrome {
+            public static void main(String[] args) {
+                Deque<Integer> deque = new ArrayDeque<>();
+                deque.addFirst(10);
+                deque.addLast(20);
+                deque.addLast(30);
+                int front = deque.peekFirst();
+                int rear = deque.peekLast();
+                if (front == rear) {
+                    System.out.println("Front and Rear elements are equal");
+                } else {
+                    System.out.println("Front element: " + front);
+                    System.out.println("Rear element: " + rear);
+                    System.out.println("Front and Rear elements are different");
+                }
             }
         }
-    }
