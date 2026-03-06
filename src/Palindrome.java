@@ -1,17 +1,15 @@
 import java.util.Scanner;
 class PalindromeChecker {
         public static void main(String[] args) {
-
-            String str = "madam";
-            String reversed = "";
-
-            for(int i = str.length() - 1; i >= 0; i--) {
-                reversed = reversed + str.charAt(i);
+            String str = "level";
+            String rev = "";
+            for (int i = str.length() - 1; i >= 0; i--) {
+                rev = rev + str.charAt(i);
             }
-            if(str.equals(reversed)) {
-                System.out.println(str + " is a Palindrome");
+            if (str.equals(rev)) {
+                System.out.println("The string is a palindrome");
             } else {
-                System.out.println(str + " is not a Palindrome");
+                System.out.println("The string is not a palindrome");
             }
         }
     }
