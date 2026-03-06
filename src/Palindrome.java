@@ -1,19 +1,23 @@
 import java.util.Stack;
-class Palindrome {
+import java.util.Queue;
+import java.util.LinkedList;
+    class Palindrome {
         public static void main(String[] args) {
-            String str = "madam";
-            Stack<Character> stack = new Stack<>();
-            for (int i = 0; i < str.length(); i++) {
-                stack.push(str.charAt(i));
-            }
-            String reversed = "";
+            Stack<Integer> stack = new Stack<>();
+            stack.push(10);
+            stack.push(20);
+            stack.push(30);
+            System.out.println("LIFO using Stack:");
             while (!stack.isEmpty()) {
-                reversed = reversed + stack.pop();
+                System.out.println(stack.pop());
             }
-            if (str.equals(reversed)) {
-                System.out.println("The string is a palindrome");
-            } else {
-                System.out.println("The string is not a palindrome");
+            Queue<Integer> queue = new LinkedList<>();
+            queue.add(10);
+            queue.add(20);
+            queue.add(30);
+            System.out.println("FIFO using Queue:");
+            while (!queue.isEmpty()) {
+                System.out.println(queue.remove());
             }
         }
     }
